@@ -85,13 +85,13 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <main className="pt-32 sm:pt-40 lg:pt-48 pb-20 px-6 min-h-screen flex items-center justify-center">
+      <main className="pt-24 sm:pt-28 lg:pt-32 pb-8 px-6 min-h-screen flex items-center justify-center">
         <div className="max-w-6xl mx-auto w-full">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center justify-center">
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center justify-center">
 
             {/* Left Content */}
-            <div className="space-y-12 text-center lg:text-left flex-1 max-w-lg">
-              <h1 className="text-5xl lg:text-6xl font-bold leading-tight animate-fade-in-up">
+            <div className="space-y-6 text-center lg:text-left flex-1 max-w-lg">
+              <h1 className="text-4xl lg:text-5xl font-bold leading-tight animate-fade-in-up">
                 Transform Any{' '}
                 <span className="bg-gradient-to-r from-cyan-500 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
                   Experience
@@ -102,14 +102,14 @@ export default function Home() {
                 </span>
               </h1>
 
-              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <p className="text-base text-gray-600 dark:text-gray-300 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                 Nexus is your all-in-one platform that makes everything faster, more secure,
                 and completely user-friendly. Access your world through our mobile apps,
                 web platform, and browser extension.
               </p>
 
               {/* Download Buttons */}
-              <div className="grid sm:grid-cols-2 gap-4 animate-fade-in-up w-full pt-8" style={{ animationDelay: '0.4s' }}>
+              <div className="grid sm:grid-cols-2 gap-4 animate-fade-in-up w-full pt-4" style={{ animationDelay: '0.4s' }}>
                 {/* Android App Button */}
                 <div className="relative">
                   <a
@@ -197,14 +197,14 @@ export default function Home() {
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-500 via-cyan-400 to-teal-400 blur-xl opacity-50 animate-pulse"></div>
 
                   {/* Middle Ring with Gradient Border - BIGGER SIZE */}
-                  <div className="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full bg-gradient-to-br from-cyan-500 via-cyan-400 to-teal-400 p-2 shadow-2xl">
+                  <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-gradient-to-br from-cyan-500 via-cyan-400 to-teal-400 p-2 shadow-2xl">
                     <div className="w-full h-full rounded-full bg-white dark:bg-slate-900 flex items-center justify-center">
                       {/* Inner Logo Area */}
                       <div className="text-center">
-                        <div className="group w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-4 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 rounded-2xl rotate-12 hover:rotate-0 flex items-center justify-center shadow-lg shadow-cyan-500/30 transition-transform duration-500 overflow-hidden border border-cyan-500/30">
-                          <Image src="/images/logo.png" alt="Nexus Logo" width={120} height={120} className="rotate-[-18deg] group-hover:rotate-0 transition-transform duration-500 object-contain drop-shadow-[0_0_15px_rgba(6,182,212,0.5)]" />
+                        <div className="group w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-3 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 rounded-2xl rotate-12 hover:rotate-0 flex items-center justify-center shadow-lg shadow-cyan-500/30 transition-transform duration-500 overflow-hidden border border-cyan-500/30">
+                          <Image src="/images/logo.png" alt="Nexus Logo" width={100} height={100} className="rotate-[-18deg] group-hover:rotate-0 transition-transform duration-500 object-contain drop-shadow-[0_0_15px_rgba(6,182,212,0.5)]" />
                         </div>
-                        <p className="text-cyan-600 dark:text-cyan-400 font-semibold text-xl">Nexus</p>
+                        <p className="text-cyan-600 dark:text-cyan-400 font-semibold text-lg">Nexus</p>
                       </div>
                     </div>
                   </div>
@@ -216,7 +216,7 @@ export default function Home() {
                 </div>
 
                 {/* Trusted Badge */}
-                <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 active-users-badge">
+                <div className="absolute -bottom-14 left-1/2 -translate-x-1/2 active-users-badge">
                   <svg className="w-5 h-5 text-cyan-500" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
