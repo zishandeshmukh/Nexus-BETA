@@ -15,8 +15,8 @@ export default function PrivacyPolicy() {
                     <div className="flex items-center justify-between">
                         {/* Logo */}
                         <Link href="/" className="flex items-center gap-4">
-                            <div className="w-12 h-12 rounded-full overflow-hidden"><Image src="/images/logo.png" alt="Nexus Logo" width={48} height={48} className="object-cover" /></div>
-                            <span className="text-2xl font-bold bg-gradient-to-r from-cyan-500 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
+                            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden"><Image src="/images/logo.png" alt="Nexus Logo" width={48} height={48} className="object-cover" /></div>
+                            <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-cyan-500 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
                                 Nexus
                             </span>
                         </Link>
@@ -88,5 +88,6 @@ export default function PrivacyPolicy() {
         </div>
     );
 }
+
 
 

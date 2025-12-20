@@ -11,12 +11,12 @@ export default function Contact() {
         <div className="min-h-screen bg-background flex flex-col">
             {/* Navbar */}
             <nav className="navbar fixed top-0 left-0 right-0 z-50">
-                <div className="max-w-7xl mx-auto px-12 py-6">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-4 sm:py-6">
                     <div className="flex items-center justify-between">
                         {/* Logo */}
-                        <Link href="/" className="flex items-center gap-4">
-                            <div className="w-12 h-12 rounded-full overflow-hidden"><Image src="/images/logo.png" alt="Nexus Logo" width={48} height={48} className="object-cover" /></div>
-                            <span className="text-2xl font-bold bg-gradient-to-r from-cyan-500 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
+                        <Link href="/" className="flex items-center gap-2 sm:gap-4">
+                            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden"><Image src="/images/logo.png" alt="Nexus Logo" width={48} height={48} className="object-cover" /></div>
+                            <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-cyan-500 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
                                 Nexus
                             </span>
                         </Link>
@@ -41,8 +41,8 @@ export default function Contact() {
 
             {/* Content */}
             <main className="pt-24 sm:pt-32 lg:pt-48 pb-16 sm:pb-24 lg:pb-32 px-4 sm:px-6 lg:px-8 flex-1 flex items-center justify-center">
-                <div className="w-full content-box px-12">
-                    <h1 className="text-5xl font-bold mb-16 text-center bg-gradient-to-r from-cyan-500 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
+                <div className="w-full content-box px-4 sm:px-8 lg:px-12">
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-12 sm:mb-16 text-center bg-gradient-to-r from-cyan-500 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
                         Contact Us
                     </h1>
 
@@ -159,5 +159,6 @@ export default function Contact() {
         </div>
     );
 }
+
 
 
