@@ -213,7 +213,7 @@ export default function MobileMenu() {
           {/* Footer */}
           <div className="mt-5 pt-5 border-t-4 border-gray-300 dark:border-gray-700">
             <p className="text-sm text-center font-bold text-gray-700 dark:text-gray-300">
-              © 2024 Nexus
+              © 2025 Nexus
             </p>
           </div>
         </div>
