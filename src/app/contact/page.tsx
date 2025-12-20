@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Footer from '@/src/components/Footer';
 import ThemeToggle from '@/src/components/ThemeToggle';
+import MobileMenu from '@/src/components/MobileMenu';
 
 export default function Contact() {
     return (
@@ -30,13 +31,16 @@ export default function Contact() {
                             <Link href="/privacy" className="navbar-link text-lg whitespace-nowrap">Privacy Policy</Link>
                             <Link href="/terms" className="navbar-link text-lg whitespace-nowrap">Terms & Conditions</Link>
                         </div>
-                        <ThemeToggle />
+                        <div className="flex items-center gap-4">
+                            <ThemeToggle />
+                            <MobileMenu />
+                        </div>
                     </div>
                 </div>
             </nav>
 
             {/* Content */}
-            <main className="pt-48 pb-32 px-8 flex-1 flex items-center justify-center">
+            <main className="pt-24 sm:pt-32 lg:pt-48 pb-16 sm:pb-24 lg:pb-32 px-4 sm:px-6 lg:px-8 flex-1 flex items-center justify-center">
                 <div className="w-full content-box px-12">
                     <h1 className="text-5xl font-bold mb-16 text-center bg-gradient-to-r from-cyan-500 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
                         Contact Us
