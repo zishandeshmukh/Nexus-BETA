@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -5,8 +6,40 @@ import Image from 'next/image';
 import Footer from '@/src/components/Footer';
 import ThemeToggle from '@/src/components/ThemeToggle';
 import MobileMenu from '@/src/components/MobileMenu';
+import { useState } from 'react';
 
 export default function Contact() {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+    const [errorText, setErrorText] = useState<string | null>(null);
+
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+        setStatus('loading');
+        setErrorText(null);
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, message }),
+            });
+            if (res.ok) {
+                setStatus('success');
+                setName('');
+                setEmail('');
+                setMessage('');
+            } else {
+                const data = await res.json().catch(() => ({}));
+                setStatus('error');
+                setErrorText(data?.error || 'Something went wrong. Please try again.');
+            }
+        } catch (err) {
+            setStatus('error');
+            setErrorText('Network error. Please try again.');
+        }
+    }
     return (
         <div className="min-h-screen bg-background flex flex-col">
             {/* Navbar */}
@@ -73,7 +106,7 @@ export default function Contact() {
                             <h2 className="text-2xl font-bold mb-6 text-cyan-600 dark:text-cyan-400">
                                 Testing Team
                             </h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                                 {/* Team Member 1 */}
                                 <div className="team-member-card">
                                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -84,6 +117,12 @@ export default function Contact() {
                                 <div className="team-member-card">
                                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                                         Mayank Patle
+                                    </h3>
+                                </div>
+                                {/* Team Member 3 */}
+                                <div className="team-member-card">
+                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                                        Uruj Shaikh
                                     </h3>
                                 </div>
                             </div>
@@ -149,6 +188,66 @@ export default function Contact() {
                                     </div>
                                 </a>
                             </div>
+                        </div>
+
+                        {/* Send us a message */}
+                        <div className="contact-glass-box mt-8">
+                            <h2 className="text-2xl font-bold mb-4 text-cyan-600 dark:text-cyan-400">Send us a message</h2>
+                            <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div className="col-span-1">
+                                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name</label>
+                                    <input
+                                        id="name"
+                                        type="text"
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}
+                                        required
+                                        minLength={2}
+                                        className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                                        placeholder="Your name"
+                                    />
+                                </div>
+                                <div className="col-span-1">
+                                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
+                                    <input
+                                        id="email"
+                                        type="email"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        required
+                                        className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                                        placeholder="you@example.com"
+                                    />
+                                </div>
+                                <div className="col-span-1 md:col-span-2">
+                                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
+                                    <textarea
+                                        id="message"
+                                        value={message}
+                                        onChange={(e) => setMessage(e.target.value)}
+                                        required
+                                        minLength={10}
+                                        rows={5}
+                                        className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                                        placeholder="How can we help?"
+                                    />
+                                </div>
+                                <div className="col-span-1 md:col-span-2 flex items-center gap-3">
+                                    <button
+                                        type="submit"
+                                        disabled={status === 'loading'}
+                                        className="inline-flex items-center justify-center rounded-md bg-cyan-600 hover:bg-cyan-700 text-white px-5 py-2.5 transition-colors disabled:opacity-60"
+                                    >
+                                        {status === 'loading' ? 'Sending…' : 'Send message'}
+                                    </button>
+                                    {status === 'success' && (
+                                        <span className="text-sm text-green-600">Thanks! We received your message.</span>
+                                    )}
+                                    {status === 'error' && (
+                                        <span className="text-sm text-red-600">{errorText}</span>
+                                    )}
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
