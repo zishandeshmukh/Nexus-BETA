@@ -335,7 +335,7 @@ html.dark .active-users-badge {
 /* Feature Card Glassmorphism */
 .feature-card {
   position: relative;
-  padding: 24px;
+  padding: 20px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.2);
   /* backdrop-filter: blur(10px);
@@ -345,9 +345,19 @@ html.dark .active-users-badge {
   transition: all 0.3s ease;
   width: 100%;
   max-width: 350px;
-  height: 380px;
+  height: auto;
+  min-height: 320px;
   display: flex;
   flex-direction: column;
+}
+
+/* Mobile optimization for feature cards */
+@media (max-width: 768px) {
+  .feature-card {
+    padding: 16px;
+    min-height: 280px;
+    max-width: 100%;
+  }
 }
 
 /* Safari only */
@@ -416,6 +426,19 @@ html.dark .content-box {
   box-shadow: 0 8px 32px rgba(34, 211, 238, 0.1);
 }
 
+/* Mobile optimization for content boxes */
+@media (max-width: 768px) {
+  .content-box {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-box {
+    padding: 16px;
+  }
+}
+
 /* Contact Page Glass Box */
 .contact-glass-box {
   position: relative;
@@ -457,6 +480,20 @@ html.dark .contact-glass-box:hover {
   border-color: rgba(34, 211, 238, 0.35);
 }
 
+/* Mobile optimization for contact glass boxes */
+@media (max-width: 768px) {
+  .contact-glass-box {
+    padding: 20px;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-glass-box {
+    padding: 16px;
+  }
+}
+
 /* Team Member Card */
 .team-member-card {
   padding: 20px;
@@ -480,6 +517,14 @@ html.dark .team-member-card {
 html.dark .team-member-card:hover {
   box-shadow: 0 8px 24px rgba(34, 211, 238, 0.15);
   border-color: rgba(34, 211, 238, 0.3);
+}
+
+/* Mobile optimization for team member cards */
+@media (max-width: 768px) {
+  .team-member-card {
+    padding: 16px;
+    text-align: center;
+  }
 }
 
 /* Social Link Card */
@@ -512,6 +557,23 @@ html.dark .social-link-card:hover {
   box-shadow: 0 8px 24px rgba(34, 211, 238, 0.15);
   border-color: rgba(34, 211, 238, 0.3);
   background: rgba(20, 40, 60, 0.7);
+}
+
+/* Mobile optimization for social link cards */
+@media (max-width: 768px) {
+  .social-link-card {
+    padding: 14px 16px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-link-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 16px;
+  }
 }
 
 /* Social Link Card - Colored Borders on Hover */
