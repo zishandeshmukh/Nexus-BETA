@@ -77,7 +77,7 @@ export default function Contact() {
                                 {/* Team Member 1 */}
                                 <div className="team-member-card">
                                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                                        Rupak Kundu
+                                        Rupak 
                                     </h3>
                                 </div>
                                 {/* Team Member 2 */}
