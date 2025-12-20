@@ -42,11 +42,23 @@ html.dark body {
   box-sizing: border-box;
 } */
 
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* Prevent horizontal overflow on all elements */
+* {
+  max-width: 100%;
 }
 
 /* Smooth Animations */
