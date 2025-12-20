@@ -5,7 +5,7 @@ export default function Footer() {
     return (
         <footer className="bg-slate-900 dark:bg-slate-950 text-gray-300">
             {/* Main Footer Content */}
-            <div className="w-full px-20 md:px-28 lg:px-36 py-16">
+            <div className="w-full px-4 sm:px-8 md:px-16 lg:px-28 xl:px-36 py-12 sm:py-16">
                 <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-12 text-center md:text-left">
                     {/* Logo and Tagline */}
                     <div className="flex flex-col items-center md:items-start">
@@ -57,12 +57,18 @@ export default function Footer() {
                     {/* Contact Us */}
                     <div className="flex flex-col items-center md:items-start">
                         <h3 className="text-cyan-400 font-semibold text-lg mb-6">Contact Us</h3>
-                        <p className="text-gray-400 mb-3">
-                            nexusteamdesk@gmail.com
-                        </p>
+                        <div className="mb-4">
+                            <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">Mail us at</p>
+                            <a 
+                                href="mailto:nexusteamdesk@gmail.com" 
+                                className="text-cyan-400 hover:text-cyan-300 font-medium text-lg transition-colors underline decoration-cyan-400/30 hover:decoration-cyan-300"
+                            >
+                                nexusteamdesk@gmail.com
+                            </a>
+                        </div>
                         <p className="text-gray-400">
                             Need immediate help? Visit our{' '}
-                            <Link href="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                            <Link href="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors font-semibold">
                                 Contact Us
                             </Link>{' '}
                             page.
