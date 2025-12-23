@@ -82,7 +82,7 @@ export default function Home() {
                   </svg>
                 )}
               </button>
-              
+
               {/* Mobile Menu */}
               <MobileMenu />
             </div>
@@ -119,20 +119,14 @@ export default function Home() {
                 {/* Android App Button */}
                 <div className="relative min-w-0">
                   <a
-                    href="#"
-                    className="btn btn-primary group w-full pointer-events-none text-sm sm:text-base"
+                    href="https://drive.google.com/drive/folders/1PmYd-H0w-3EQeYpqCQnXe2Y8gQ_GJjIE?usp=sharing"
+                    className="btn btn-primary group w-full text-sm sm:text-base"
                   >
                     <svg className="w-5 h-5 sm:w-6 sm:h-6 transition-transform group-hover:scale-110 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M17.6 11.4c0-.6-.5-1.1-1.1-1.1s-1.1.5-1.1 1.1.5 1.1 1.1 1.1 1.1-.5 1.1-1.1m-9.1 0c0-.6-.5-1.1-1.1-1.1s-1.1.5-1.1 1.1.5 1.1 1.1 1.1 1.1-.5 1.1-1.1m9.4-4.8l1.5-2.6c.1-.2 0-.4-.2-.5-.2-.1-.4 0-.5.2l-1.5 2.6c-1.3-.6-2.7-.9-4.2-.9s-2.9.3-4.2.9L7.3 3.7c-.1-.2-.3-.3-.5-.2-.2.1-.3.3-.2.5l1.5 2.6C5.7 7.8 4 10.4 4 13.5h16c0-3.1-1.7-5.7-4.1-6.9M4 14.5v6c0 .8.7 1.5 1.5 1.5h1c.8 0 1.5-.7 1.5-1.5v-6H4m13 0v6c0 .8.7 1.5 1.5 1.5h1c.8 0 1.5-.7 1.5-1.5v-6h-4m-9 0v7c0 .8.7 1.5 1.5 1.5h5c.8 0 1.5-.7 1.5-1.5v-7H8z" />
                     </svg>
                     <span className="truncate">Download Android</span>
                   </a>
-                  {/* Blur overlay with lock */}
-                  <div className="absolute inset-0 bg-white/60 dark:bg-slate-900/60 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                    <svg className="w-6 h-6 sm:w-8 sm:h-8 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>
-                  </div>
                 </div>
 
                 {/* iOS App Button */}
@@ -146,8 +140,8 @@ export default function Home() {
                     </svg>
                     <span className="truncate">Download iOS</span>
                   </a>
-                  {/* Blur overlay with lock */}
-                  <div className="absolute inset-0 bg-white/60 dark:bg-slate-900/60 backdrop-blur-sm rounded-xl flex items-center justify-center">
+                  {/* Lock overlay without blur - darker in light mode for better contrast */}
+                  <div className="absolute inset-0 bg-gray-200/80 dark:bg-slate-900/60 rounded-xl flex items-center justify-center">
                     <svg className="w-6 h-6 sm:w-8 sm:h-8 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
@@ -157,39 +151,27 @@ export default function Home() {
                 {/* Web App Button */}
                 <div className="relative min-w-0">
                   <a
-                    href="#"
-                    className="btn btn-primary group w-full pointer-events-none text-sm sm:text-base"
+                    href="https://nexus-memorylane.vercel.app/"
+                    className="btn btn-primary group w-full text-sm sm:text-base"
                   >
                     <svg className="w-5 h-5 sm:w-6 sm:h-6 transition-transform group-hover:scale-110 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                     </svg>
                     <span className="truncate">Use Web App</span>
                   </a>
-                  {/* Blur overlay with lock */}
-                  <div className="absolute inset-0 bg-white/60 dark:bg-slate-900/60 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                    <svg className="w-6 h-6 sm:w-8 sm:h-8 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>
-                  </div>
                 </div>
 
                 {/* Chrome Extension Button */}
                 <div className="relative min-w-0">
                   <a
-                    href="#"
-                    className="btn btn-outline group w-full pointer-events-none text-sm sm:text-base"
+                    href="https://drive.google.com/drive/folders/1op9m2-_Vm4QZDhXkn5-tK1WYaMQgtpmJ?usp=sharing"
+                    className="btn btn-outline group w-full text-sm sm:text-base"
                   >
                     <svg className="w-5 h-5 sm:w-6 sm:h-6 transition-transform group-hover:scale-110 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0 1 12 6.545h10.691A12 12 0 0 0 12 0zM1.931 5.47A11.943 11.943 0 0 0 0 12c0 6.012 4.42 10.991 10.189 11.864l3.953-6.847a5.45 5.45 0 0 1-6.865-2.29zm13.342 2.166a5.446 5.446 0 0 1 1.45 7.09l.002.001h-.002l-5.344 9.257c.206.01.413.016.621.016 6.627 0 12-5.373 12-12 0-1.54-.29-3.011-.818-4.364zM12 16.364a4.364 4.364 0 1 1 0-8.728 4.364 4.364 0 0 1 0 8.728z" />
                     </svg>
                     <span className="truncate">Browser Extension</span>
                   </a>
-                  {/* Blur overlay with lock */}
-                  <div className="absolute inset-0 bg-white/60 dark:bg-slate-900/60 backdrop-blur-sm rounded-xl flex items-center justify-center">
-                    <svg className="w-6 h-6 sm:w-8 sm:h-8 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>
-                  </div>
                 </div>
               </div>
             </div>
