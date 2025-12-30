@@ -93,12 +93,12 @@ export default function Contact() {
                                     </h3>
                                 </div>
                                 {/* Team Member 2 */}
-                                {/* <div className="team-member-card">
+                                <div className="team-member-card">
                                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                                         Vinay Titarmare
                                     </h3>
                                 </div>
-                            </div> */}
+                            </div>
                         </div> 
 
                         {/* Testing Team Box */}
@@ -108,11 +108,11 @@ export default function Contact() {
                             </h2>
                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                                 {/* Team Member 1 */}
-                                {/* <div className="team-member-card">
+                                <div className="team-member-card">
                                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                                         Rupak Kundu
                                     </h3>
-                                </div>  comment*/}
+                                </div>
                                 {/* Team Member 2 */}
                                 <div className="team-member-card">
                                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
