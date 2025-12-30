@@ -112,7 +112,7 @@ export default function Contact() {
                                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                                         Rupak Kundu
                                     </h3>
-                                </div> */}
+                                </div>  comment*/}
                                 {/* Team Member 2 */}
                                 <div className="team-member-card">
                                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
